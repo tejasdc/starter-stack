@@ -1,0 +1,27 @@
+{
+  "name": "starter-stack",
+  "private": true,
+  "packageManager": "pnpm@10.5.2",
+  "scripts": {
+    "build": "turbo run build",
+    "dev": "turbo run dev --parallel",
+    "test": "turbo run test",
+    "typecheck": "turbo run typecheck",
+    "check": "biome check --write .",
+    "db:generate": "pnpm --filter @starter/api run db:generate",
+    "db:migrate": "pnpm --filter @starter/api run db:migrate",
+    "db:push": "pnpm --filter @starter/api run db:push",
+    "db:studio": "pnpm --filter @starter/api run db:studio",
+    "db:seed": "pnpm --filter @starter/api run db:seed"
+  },
+  "pnpm": {
+    "onlyBuiltDependencies": [
+      "esbuild"
+    ]
+  },
+  "devDependencies": {
+    "@biomejs/biome": "^1.9.0",
+    "turbo": "^2.5.0",
+    "vitest": "^4.0.18"
+  }
+}
