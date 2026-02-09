@@ -1,3 +1,4 @@
+import fs from "node:fs";
 import path from "node:path";
 import { fileURLToPath } from "node:url";
 
@@ -13,7 +14,10 @@ export default async function globalSetup() {
 
   const { db } = await import("../src/db/index.js");
   const migrationsFolder = path.resolve(fileURLToPath(new URL("../drizzle", import.meta.url)));
-  await migrate(db as any, { migrationsFolder });
+  const journalPath = path.join(migrationsFolder, "meta", "_journal.json");
+  if (fs.existsSync(journalPath)) {
+    await migrate(db as any, { migrationsFolder });
+  }
 
   return async () => {
     try {
