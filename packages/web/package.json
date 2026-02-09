@@ -5,9 +5,9 @@
   "type": "module",
   "scripts": {
     "dev": "vite",
-    "build": "tsc && vite build",
+    "build": "tsr generate && tsc && vite build",
     "preview": "vite preview",
-    "typecheck": "tsc --noEmit"
+    "typecheck": "tsr generate && tsc --noEmit"
   },
   "dependencies": {
     "@starter/api": "workspace:*",
@@ -21,6 +21,7 @@
   },
   "devDependencies": {
     "@tanstack/router-devtools": "^1.158.4",
+    "@tanstack/router-cli": "^1.158.4",
     "@tanstack/router-plugin": "^1.158.4",
     "@tailwindcss/vite": "^4.1.18",
     "@types/react": "^19.0.0",
