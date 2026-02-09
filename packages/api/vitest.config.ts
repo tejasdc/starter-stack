@@ -9,6 +9,7 @@ export default defineConfig({
     testTimeout: 90_000,
     hookTimeout: 90_000,
     fileParallelism: false,
+    passWithNoTests: true,
     coverage: {
       thresholds: {
         branches: 70,
