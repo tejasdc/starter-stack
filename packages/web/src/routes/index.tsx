@@ -20,7 +20,7 @@ function HomePage() {
             API Health
           </a>
           <a
-            href="https://github.com/your-org/starter-stack"
+            href="https://github.com/tejasdc/starter-stack"
             className="rounded-lg border border-[var(--border-subtle)] bg-[var(--bg-secondary)] px-4 py-2 text-sm font-semibold hover:border-[var(--border-medium)]"
           >
             Documentation

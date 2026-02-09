@@ -2,7 +2,7 @@
 
 Full-stack TypeScript starter with Hono + React + TanStack + Tailwind v4 + BullMQ + PWA. AI-ready with Claude Code skills, deploy to Render in one click.
 
-[![Deploy to Render](https://render.com/images/deploy-to-render-button.svg)](https://render.com/deploy?repo=https://github.com/your-org/starter-stack)
+[![Deploy to Render](https://render.com/images/deploy-to-render-button.svg)](https://render.com/deploy?repo=https://github.com/tejasdc/starter-stack)
 
 ## What's Included
 
@@ -18,7 +18,7 @@ Full-stack TypeScript starter with Hono + React + TanStack + Tailwind v4 + BullM
 | Testing | [Vitest](https://vitest.dev) + [Testcontainers](https://testcontainers.com) | Real Postgres in tests, no mocks |
 | Build | [Turborepo](https://turbo.build) + [Biome](https://biomejs.dev) | Fast builds, fast linting |
 | Deploy | [Render](https://render.com) | One-click deploy, managed infrastructure |
-| AI Agent | [Claude Code](https://claude.ai/claude-code) | CLAUDE.md + 5 skills for guided development |
+| AI Agent | [Claude Code](https://claude.ai/claude-code) | CLAUDE.md + 6 skills for guided development |
 
 ## Quick Start
 
@@ -144,7 +144,7 @@ Deploy this project to Render. Use the render.yaml blueprint.
 
 ## Claude Code Skills
 
-This project includes 5 skills that guide Claude Code to follow best practices:
+This project includes 6 skills that guide Claude Code to follow best practices:
 
 | Skill | Type | Purpose |
 |-------|------|---------|
@@ -153,6 +153,7 @@ This project includes 5 skills that guide Claude Code to follow best practices:
 | `bullmq-patterns` | Auto-loaded | Queue setup, workers, retry config, testing |
 | `/run-tests` | User-invocable | Full build + typecheck + test pipeline |
 | `/pre-deploy` | User-invocable | Dangerous pattern scan + deployment checklist |
+| `/render-debug` | User-invocable | Debug production issues via subagent (checks logs, deploys, metrics) |
 
 ## Adding a New Feature
 
